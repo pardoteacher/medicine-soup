@@ -9,47 +9,12 @@
 header{background:var(--teal);color:white;padding:24px 18px;text-align:center;border-bottom:7px solid var(--orange)}header h1{margin:0;font-size:clamp(28px,5vw,42px)}header p{margin:6px 0 0}
 main{max-width:960px;margin:0 auto;padding:18px}.intro{background:white;border-radius:18px;padding:16px;margin-bottom:18px;border:2px solid #d9e7e7}
 section{background:white;border-radius:18px;padding:18px;margin:18px 0;border:2px solid #e5e2dc;box-shadow:0 3px 0 #e5e2dc}h2{color:var(--teal);margin-top:0}h3{color:#a7530b;margin-bottom:4px}
-
-/* Estilo para recrear las tarjetas de vocabulario de la imagen */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.word-card{
-  background: white;
-  border-radius: 18px;
-  padding: 16px;
-  border: 2px solid #333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.word-card .img-container{
-  width: 100%;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-.word-card img{
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-.word-card .word-title{
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-.word-card .word-desc{
-  font-size: 15px;
-  color: #444;
-}
-
+.word-card{background:white;border-radius:18px;padding:16px;border:2px solid #333;box-shadow:0 4px 10px rgba(0,0,0,0.08);display:flex;flex-direction:column;align-items:center;text-align:center}
+.word-card .img-container{width:100%;height:160px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#f9f9f9}
+.word-card img{max-width:100%;max-height:100%;object-fit:contain}
+.word-card .word-title{font-size:20px;font-weight:bold;color:#000;text-transform:uppercase;margin-bottom:4px}
+.word-card .word-desc{font-size:15px;color:#444}
 label{display:block;font-weight:bold;margin:10px 0 5px}select{font:inherit;width:100%;padding:10px;border:2px solid #b7caca;border-radius:10px;background:white;color:var(--ink)}.question{border-top:1px solid #e4e4e4;padding:12px 0}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}button{font: bold 17px Arial,sans-serif;padding:12px 18px;border:0;border-radius:12px;cursor:pointer;background:var(--teal);color:white}button.secondary{background:#e9eeee;color:var(--ink)}.feedback{margin-top:12px;padding:12px;border-radius:12px;display:none}.feedback.show{display:block}.good{background:var(--green);color:#175b2b}.try{background:var(--red);color:#873e0c}.small{font-size:15px;color:#526166}.sentence{background:#fff6e9;border-left:5px solid var(--orange);padding:10px 12px;border-radius:8px;margin:8px 0}.answerline{border-bottom:1px solid #aaa;min-height:26px;margin:8px 0 15px}
 @media print{body{background:white;font-size:14px}header{background:white;color:var(--teal);border-bottom:2px solid var(--orange)}section,.intro{box-shadow:none;break-inside:avoid}button{display:none}select{border:1px solid #888}main{max-width:none}}
 </style></head><body>
@@ -61,88 +26,15 @@ label{display:block;font-weight:bold;margin:10px 0 5px}select{font:inherit;width
   <h2>1. Vocabulary bank</h2>
   <p>Read the word, look at the picture in your comic and say what it means.</p>
   <div class="grid">
-
-    <!-- HUNGRY -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/boy-feeling-hungry-illustration-download-in-svg-png-gif-file-formats--starving-food-person-pack-people-illustrations-4543168.png" alt="Hungry boy">
-      </div>
-      <div class="word-title">HUNGRY</div>
-      <div class="word-desc">I want food.</div>
-    </div>
-
-    <!-- HEADACHE -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/boy-suffering-from-headache-illustration-download-in-svg-png-gif-file-formats--pain-head-fever-symptom-illness-pack-healthcare-medical-illustrations-4543162.png" alt="Headache boy">
-      </div>
-      <div class="word-title">HEADACHE</div>
-      <div class="word-desc">My head hurts.</div>
-    </div>
-
-    <!-- COUGH -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/boy-coughing-illustration-download-in-svg-png-gif-file-formats--cough-flu-sore-throat-illness-pack-healthcare-medical-illustrations-4543160.png" alt="Coughing boy">
-      </div>
-      <div class="word-title">COUGH</div>
-      <div class="word-desc">I cough.</div>
-    </div>
-
-    <!-- TEMPERATURE / FEVER -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/boy-with-fever-illustration-download-in-svg-png-gif-file-formats--thermometer-sick-illness-temperature-pack-healthcare-medical-illustrations-4543166.png" alt="Boy with temperature">
-      </div>
-      <div class="word-title">TEMPERATURE</div>
-      <div class="word-desc">My body is too hot.</div>
-    </div>
-
-    <!-- STONE -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/stone-illustration-download-in-svg-png-gif-file-formats--rock-pebble-nature-pack-user-interface-illustrations-4543170.png" alt="Stone">
-      </div>
-      <div class="word-title">STONE</div>
-      <div class="word-desc">A small, hard rock.</div>
-    </div>
-
-    <!-- POT -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/cooking-pot-illustration-download-in-svg-png-gif-file-formats--soup-kitchen-utensil-food-pack-drink-illustrations-4543172.png" alt="Cooking Pot">
-      </div>
-      <div class="word-title">POT</div>
-      <div class="word-desc">We cook food in it.</div>
-    </div>
-
-    <!-- VEGETABLES -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/fresh-vegetables-illustration-download-in-svg-png-gif-file-formats--carrot-onion-peas-food-pack-drink-illustrations-4543174.png" alt="Vegetables">
-      </div>
-      <div class="word-title">VEGETABLES</div>
-      <div class="word-desc">Onions, carrots, peas…</div>
-    </div>
-
-    <!-- SOUP -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/hot-soup-bowl-illustration-download-in-svg-png-gif-file-formats--food-meal-dish-pack-drink-illustrations-4543176.png" alt="Soup bowl">
-      </div>
-      <div class="word-title">SOUP</div>
-      <div class="word-desc">A hot food we eat.</div>
-    </div>
-
-    <!-- DOCTOR -->
-    <div class="word-card">
-      <div class="img-container">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/doctor-illustration-download-in-svg-png-gif-file-formats--medical-physician-pediatrician-pack-people-illustrations-4543178.png" alt="Doctor">
-      </div>
-      <div class="word-title">DOCTOR</div>
-      <div class="word-desc">A person who helps sick people.</div>
-    </div>
-
+    <div class="word-card"><div class="img-container"><img src="images/hungry.png" alt="Hungry"></div><div class="word-title">HUNGRY</div><div class="word-desc">I want food.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/headache.png" alt="Headache"></div><div class="word-title">HEADACHE</div><div class="word-desc">My head hurts.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/cough.png" alt="Cough"></div><div class="word-title">COUGH</div><div class="word-desc">I cough.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/temperature.png" alt="Temperature"></div><div class="word-title">TEMPERATURE</div><div class="word-desc">My body is too hot.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/stone.png" alt="Stone"></div><div class="word-title">STONE</div><div class="word-desc">A small, hard rock.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/pot.png" alt="Pot"></div><div class="word-title">POT</div><div class="word-desc">We cook food in it.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/vegetables.png" alt="Vegetables"></div><div class="word-title">VEGETABLES</div><div class="word-desc">Onions, carrots, peas…</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/soup.png" alt="Soup"></div><div class="word-title">SOUP</div><div class="word-desc">A hot food we eat.</div></div>
+    <div class="word-card"><div class="img-container"><img src="images/doctor.png" alt="Doctor"></div><div class="word-title">DOCTOR</div><div class="word-desc">A person who helps sick people.</div></div>
   </div>
 </section>
 
