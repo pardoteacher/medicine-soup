@@ -3,19 +3,45 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Medicine Soup — Interactive Story Support</title>
+<!-- Carga de Font Awesome para iconos vectoriales profesionales -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root{--teal:#2b6b74;--orange:#e87a1e;--cream:#faf6f0;--ink:#273238;--pale:#e8f2f2;--green:#e4f4e8;--red:#fff0e8}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.5 Arial,sans-serif}
 header{background:var(--teal);color:white;padding:24px 18px;text-align:center;border-bottom:7px solid var(--orange)}header h1{margin:0;font-size:clamp(28px,5vw,42px)}header p{margin:6px 0 0}
 main{max-width:900px;margin:0 auto;padding:18px}.intro{background:white;border-radius:18px;padding:16px;margin-bottom:18px;border:2px solid #d9e7e7}
-section{background:white;border-radius:18px;padding:18px;margin:18px 0;border:2px solid #e5e2dc;box-shadow:0 3px 0 #e5e2dc}h2{color:var(--teal);margin-top:0}h3{color:#a7530b;margin-bottom:4px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.word{background:#f1f7f7;border-radius:14px;padding:12px;border:1px solid #c7dddd}.emoji{font-size:32px;display:block}.word strong{color:var(--teal)}label{display:block;font-weight:bold;margin:10px 0 5px}select{font:inherit;width:100%;padding:10px;border:2px solid #b7caca;border-radius:10px;background:white;color:var(--ink)}.question{border-top:1px solid #e4e4e4;padding:12px 0}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}button{font: bold 17px Arial,sans-serif;padding:12px 18px;border:0;border-radius:12px;cursor:pointer;background:var(--teal);color:white}button.secondary{background:#e9eeee;color:var(--ink)}.feedback{margin-top:12px;padding:12px;border-radius:12px;display:none}.feedback.show{display:block}.good{background:var(--green);color:#175b2b}.try{background:var(--red);color:#873e0c}.small{font-size:15px;color:#526166}.sentence{background:#fff6e9;border-left:5px solid var(--orange);padding:10px 12px;border-radius:8px;margin:8px 0}.answerline{border-bottom:1px solid #aaa;min-height:26px;margin:8px 0 15px}
+section{background:white;border-radius:18px;padding:18px;margin:18px 0;border:2px solid #e5e2dc;box-shadow:0 3px 0 #e5e2dc}h2{color:var(--teal);margin-top:0}h3{color:#a7530b;margin-bottom:4px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.word{background:#f1f7f7;border-radius:14px;padding:12px;border:1px solid #c7dddd;text-align:center}
+/* Estilo mejorado para los iconos */
+.word i.icon {
+  font-size: 36px;
+  color: var(--teal);
+  display: block;
+  margin: 6px auto 10px auto;
+  background: white;
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+.word strong{color:var(--teal)}label{display:block;font-weight:bold;margin:10px 0 5px}select{font:inherit;width:100%;padding:10px;border:2px solid #b7caca;border-radius:10px;background:white;color:var(--ink)}.question{border-top:1px solid #e4e4e4;padding:12px 0}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}button{font: bold 17px Arial,sans-serif;padding:12px 18px;border:0;border-radius:12px;cursor:pointer;background:var(--teal);color:white}button.secondary{background:#e9eeee;color:var(--ink)}.feedback{margin-top:12px;padding:12px;border-radius:12px;display:none}.feedback.show{display:block}.good{background:var(--green);color:#175b2b}.try{background:var(--red);color:#873e0c}.small{font-size:15px;color:#526166}.sentence{background:#fff6e9;border-left:5px solid var(--orange);padding:10px 12px;border-radius:8px;margin:8px 0}.answerline{border-bottom:1px solid #aaa;min-height:26px;margin:8px 0 15px}
 @media print{body{background:white;font-size:14px}header{background:white;color:var(--teal);border-bottom:2px solid var(--orange)}section,.intro{box-shadow:none;break-inside:avoid}button{display:none}select{border:1px solid #888}main{max-width:none}}
 </style></head><body>
-<header><h1>🥣 Medicine Soup</h1><p>Interactive story support · English · Primary</p></header>
+<header><h1><i class="fa-solid fa-bowl-food"></i> Medicine Soup</h1><p>Interactive story support · English · Primary</p></header>
 <main>
 <div class="intro"><strong>How to use this activity:</strong> Look at the original comic. Read one section at a time. Choose an answer from each menu, then press <em>Check answers</em>. You can use this file offline in a web browser.</div>
 <section><h2>1. Vocabulary bank</h2><p>Read the word, look at the picture in your comic and say what it means.</p><div class="grid">
-<div class="word"><span class="emoji">🍽️</span><strong>HUNGRY</strong><br>I want food.</div><div class="word"><span class="emoji">🤕</span><strong>HEADACHE</strong><br>My head hurts.</div><div class="word"><span class="emoji">😷</span><strong>COUGH</strong><br>I cough.</div><div class="word"><span class="emoji">🌡️</span><strong>TEMPERATURE / FEVER</strong><br>My body is too hot.</div><div class="word"><span class="emoji">🪨</span><strong>STONE</strong><br>A small, hard rock.</div><div class="word"><span class="emoji">🍲</span><strong>POT</strong><br>We cook food in it.</div><div class="word"><span class="emoji">🧅🥕🫛</span><strong>VEGETABLES</strong><br>Onions, carrots, peas…</div><div class="word"><span class="emoji">🥣</span><strong>SOUP</strong><br>A hot food we eat.</div><div class="word"><span class="emoji">🩺</span><strong>DOCTOR</strong><br>A person who helps sick people.</div></div></section>
+<div class="word"><i class="fa-solid fa-utensils icon"></i><strong>HUNGRY</strong><br>I want food.</div>
+<div class="word"><i class="fa-solid fa-face-frown-open icon"></i><strong>HEADACHE</strong><br>My head hurts.</div>
+<div class="word"><i class="fa-solid fa-head-side-cough icon"></i><strong>COUGH</strong><br>I cough.</div>
+<div class="word"><i class="fa-solid fa-temperature-full icon"></i><strong>TEMPERATURE / FEVER</strong><br>My body is too hot.</div>
+<div class="word"><i class="fa-solid fa-gem icon"></i><strong>STONE</strong><br>A small, hard rock.</div>
+<div class="word"><i class="fa-solid fa-fire-burner icon"></i><strong>POT</strong><br>We cook food in it.</div>
+<div class="word"><i class="fa-solid fa-carrot icon"></i><strong>VEGETABLES</strong><br>Onions, carrots, peas…</div>
+<div class="word"><i class="fa-solid fa-bowl-rice icon"></i><strong>SOUP</strong><br>A hot food we eat.</div>
+<div class="word"><i class="fa-solid fa-user-doctor icon"></i><strong>DOCTOR</strong><br>A person who helps sick people.</div>
+</div></section>
 <section><h2>2. Follow the story</h2><p class="small">Choose the best answer for each question.</p>
 <div class="question"><label for="q1">1. Where does the traveller arrive?</label><select id="q1"><option value="">Choose an answer…</option><option value="village">In a village</option><option value="school">In a school</option><option value="forest">In a forest</option></select></div>
 <div class="question"><label for="q2">2. What problems do people have?</label><select id="q2"><option value="">Choose an answer…</option><option value="ill">Some are ill, and the traveller is hungry</option><option value="lost">They are lost</option><option value="cold">Everyone is cold</option></select></div>
@@ -26,18 +52,4 @@ section{background:white;border-radius:18px;padding:18px;margin:18px 0;border:2p
 <div class="btns"><button onclick="checkStory()">Check answers</button><button class="secondary" onclick="resetStory()">Try again</button></div><div id="storyFeedback" class="feedback" aria-live="polite"></div></section>
 <section><h2>3. Put the story in order</h2><p>Choose the event that comes at each step. Use the comic to help you.</p>
 <div id="sequence"></div><div class="btns"><button onclick="checkSequence()">Check sequence</button><button class="secondary" onclick="resetSequence()">Try again</button></div><div id="sequenceFeedback" class="feedback" aria-live="polite"></div></section>
-<section><h2>4. Sentence starters</h2><div class="sentence">The traveller is…</div><div class="sentence">He has… / She has…</div><div class="sentence">He puts… in…</div><div class="sentence">First… Then… Finally…</div><div class="sentence">I think… because…</div></section>
-<section><h2>5. Think about the story</h2><p><strong>Literal:</strong> What vegetables do the villagers add?</p><div class="answerline"></div><p><strong>Inferential:</strong> Why does the traveller say the soup will taste better with vegetables?</p><div class="answerline"></div><p><strong>Evaluative:</strong> Is sharing important? Why?</p><div class="answerline"></div><p><strong>Think deeper:</strong> Does the stone really cure the villagers?</p><div class="answerline"></div><p class="small"><strong>Remember:</strong> The stone is part of the traveller’s clever trick; it is not real medicine. Sharing food and spending time together helps the villagers feel better. People who are ill may need appropriate medical care.</p></section>
-<section><h2>6. Helpful reading tips</h2><ul><li>Read one comic panel at a time.</li><li>Point to the characters and pictures while reading.</li><li>Give yourself time to think before answering.</li><li>You can point, say one word, or use a sentence starter.</li><li>Ask for an explanation if a word is confusing.</li></ul><div class="btns"><button class="secondary" onclick="window.print()">Print this activity</button></div></section>
-</main>
-<script>
-const events=["The traveller arrives in the village.","The villagers feel hungry or ill.","The traveller shows them a stone.","They put the stone in a cooking pot.","The villagers bring vegetables.","Everyone eats the soup together."];
-const correctSequence=[0,1,2,3,4,5];
-const seq=document.getElementById('sequence');
-for(let i=0;i<6;i++){const label=document.createElement('label');label.textContent=(i+1)+'. Choose the event for step '+(i+1);label.htmlFor='s'+i;const sel=document.createElement('select');sel.id='s'+i;sel.innerHTML='<option value="">Choose an event…</option>'+events.map((e,j)=>`<option value="${j}">${e}</option>`).join('');seq.append(label,sel)}
-function showFeedback(id,msg,good){const el=document.getElementById(id);el.className='feedback show '+(good?'good':'try');el.textContent=msg}
-function checkStory(){const answers={q1:'village',q2:'ill',q3:'stone',q4:'stone',q5:'vegetables',q6:'share'};let score=0,blank=0;for(const [id,val] of Object.entries(answers)){const chosen=document.getElementById(id).value;if(!chosen)blank++;else if(chosen===val)score++}showFeedback('storyFeedback',`You got ${score} out of 6 correct.${blank?` You still have ${blank} question(s) to answer.`:score===6?' Excellent work!':' Check the comic and try the questions again.'}`,score===6&&blank===0)}
-function resetStory(){['q1','q2','q3','q4','q5','q6'].forEach(id=>document.getElementById(id).value='');const el=document.getElementById('storyFeedback');el.className='feedback';el.textContent=''}
-function checkSequence(){let score=0,blank=0;for(let i=0;i<6;i++){let v=document.getElementById('s'+i).value;if(v==='')blank++;else if(Number(v)===i)score++}showFeedback('sequenceFeedback',`You got ${score} out of 6 in the correct position.${blank?` Complete ${blank} more step(s).`:score===6?' Perfect sequence!':' Look at the panels and try again.'}`,score===6&&blank===0)}
-function resetSequence(){for(let i=0;i<6;i++)document.getElementById('s'+i).value='';const el=document.getElementById('sequenceFeedback');el.className='feedback';el.textContent=''}
-</script></body></html>
+<section><h2>4. Sentence starters</h2><div class="sentence">The traveller is…</div><div class="sentence">He has… / She has…</div><div class="sentence">He puts… in…</div><div class="sentence">First… Then… Finally
